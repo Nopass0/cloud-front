@@ -1,0 +1,376 @@
+.header_read {
+    min-width: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 70px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.header p, .en,.ru{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.en, .ru {
+    cursor: pointer;
+}
+
+.en.active, .ru.active, .sign_in.active, .sign_up.active {
+    color: #6176DE;
+}
+
+
+.en:hover, .ru:hover, .sign_in:hover, .sign_up:hover {
+    color: #6176DE;
+    transition: all .3s;
+}
+
+.wrapper_read {
+    display: flex;
+    justify-content: center;
+}
+.block_read {
+    width: 768px;
+    min-width: 540px;
+    height: 768px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10.5px);
+}
+
+.inside_read {
+    padding: 0px 70px;
+}
+
+.header_block_read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_read::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #6176DE;
+    border-radius: 2px;
+    margin-bottom: 44px;
+}
+
+.read_button button{
+    width: 607px;
+    height: 97px;
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+/* Read Message */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* header */
+.header_r_msg {
+    min-width: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.header_r_msg p {
+    margin: 0;
+}
+
+.header_r_msg p, .en,.ru{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.en, .ru {
+    cursor: pointer;
+}
+
+.en.active, .ru.active, .sign_in.active, .sign_up.active {
+    color: #6176DE;
+}
+
+
+.en:hover, .ru:hover, .sign_in:hover, .sign_up:hover {
+    color: #6176DE;
+    transition: all .3s;
+}
+
+/* Sign Button's */
+.button_sign button {
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button_sign button:first-child {
+    margin-right: 36px;
+}
+
+/* White Block */
+.wrapper_r_msg {
+
+    display: flex;
+    justify-content: center;
+}
+.block_r_msg {
+    width: 768px;
+    min-width: 570px;
+    height: 969px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10.5px);
+}
+
+.inside_r_msg {
+    padding: 0px 70px;
+}
+
+.header_block_r_msg {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header_block_r_msg h2 {
+    margin-right: 63px;
+}
+
+
+.from h3{
+    margin: 0;
+}
+
+/* Input To */
+
+.to_r_msg, .subject_r_msg {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.to_r_msg label, .subject_r_msg label, .attach_r_msg span {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.to_r_msg input[type=email], .subject_r_msg input[type=text] {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+#to, #subject {
+    border-radius: 20px;
+    background: #F2F3F6;
+    border: none;
+    outline: none;
+    height: 65px;
+}
+
+.subject_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.button_subject {
+    padding: 8.834px 13px 9.166px 13px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9.816px;
+    background: #6176DE;
+    border: none;
+    color: white;
+    cursor: pointer;  
+    font-size: 12px;
+}
+
+.button_subject:hover {
+    transition: all .3s;    
+    background: #6176dee1;
+}
+
+.attach_r_msg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.attach_r_msg p {
+    padding: 8.834px 35px 9.166px 36px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9.816px;
+    background: #6176DE;
+    border: none;
+    color: white;
+    cursor: pointer;  
+    font-size: 13px;
+}
+
+#attach {
+    visibility: hidden;
+}
+
+#editor-container {
+    height: 375px;
+  }
+
+/* Quil Text Editor */
+
+.plain_text {
+    border-radius: 20px;
+    background: #F2F3F6;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif !important;
+
+}
+
+.quill {
+    height: 158px;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.ql-container {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+em {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+}
+
+.ql-editor p, .ql-editor ol, .ql-editor ul, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+   
+}
+
+.ql-editor {
+    height: 70% !important;
+    font-size: 15px;
+}
+.ql-toolbar.ql-snow,.ql-container.ql-snow {
+    border: none !important;
+}
+
+.ql-toolbar.ql-snow {
+    padding: 0 30px !important;
+}
+
+.ql-container.ql-snow {
+    padding: 0 22px !important;
+}
+
+.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+    border-radius: 4px !important;
+    background: #FFF !important;
+    margin-right: 5px;
+}
+
+.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover{
+    transition: all .3s;
+    background: #6176DE !important;
+}
+
+.ql-snow .ql-stroke:hover {
+    stroke: white !important;
+}
+
+.ql-snow .ql-fill:hover, .ql-snow .ql-stroke.ql-fill:hover {
+    fill: white !important;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-stroke, .ql-snow .ql-toolbar button:hover .ql-stroke {
+    stroke: white !important;
+}
+
+.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover{
+    color: white !important;
+}
+
+.ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill, .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
+    fill: white !important;
+}
+
+.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover {
+    color: white !important;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill, .ql-snow .ql-toolbar button:hover .ql-fill {
+    fill: white !important;
+}
+
+/* Footer */
+
+.footer_r_msg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copy_block {
+
+}
+
+.copy_me {
+    display: flex;
+    align-items: center;
+}
+
+.copy_me input[type="checkbox"] {
+    border-radius: 4px;
+    border: 1.3px solid #000;
+    cursor: pointer;
+}
+
+.copy_email::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #6176DE;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.send_secure {
+    width: 186px;
+    height: 65px;
+    padding: 18px 21px 18px 22px;
+    font-size: 24px;
+    font-weight: 500;
+}

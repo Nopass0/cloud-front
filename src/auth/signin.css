@@ -1,0 +1,121 @@
+.InsideBlock {
+    padding: 0px 70px;
+}
+
+.header_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 38px;
+}
+
+.header_block h1 {
+    margin-right: 55px;
+}
+
+/* Input Email */
+.input_email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.input_email label {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.input_email input[type=email] {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+#email_In {
+    border-radius: 20px;
+    background: #F2F3F6;
+    border: none;
+    outline: none;
+    height: 65px;
+}
+
+/* Input Password 2/2 */
+.input_password_email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.input_password_email label {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.input_password_email input[type=password] {
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+#password_In {
+    border-radius: 20px;
+    background: #F2F3F6;
+    border: none;
+    outline: none;
+    height: 65px;
+}
+
+
+.accept_sign_button {
+    margin-bottom: 10px;
+}
+
+.main_block p, .footer_block p {
+    color: #CCC;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.main_block p {
+    margin-bottom: 220px;
+}
+
+.footer_block p::before {
+    content: '';
+    display: block;
+    background-color: #6176DE;
+    height: 2px;
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 44px;
+}
+
+.error_Block {
+    position: absolute;
+    right: -620px;
+    top: 0;
+    width: 367px;
+    height: 101px;
+    display: flex;
+    padding: 0px 195px 0px 20px;
+    align-items: center;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+    font-size: 24px;
+    font-weight: 400;
+    color: #FF2626;
+    animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
