@@ -106,7 +106,7 @@
 .to_message label, .subject_message label, .attach_message span {
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .to_message input[type=email], .subject_message input[type=text] {

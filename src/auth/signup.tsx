@@ -110,8 +110,8 @@ const Sign_Up: React.FC = () => {
             </div>
             <div className="main_block">
                 <h2>We have sent a message to your email</h2>
-                <p style={{marginBottom: '30px', fontSize: '24px', fontWeight: '400'}}>Please check the message and click on the link to <br/> confirm your registration</p>
-                <p style={{marginBottom: '290px'}}>Protected by ***** <a href="#!" className="link">More</a></p>
+                <p style={{marginBottom: '30px' ,fontSize: '24px', fontWeight: '400'}}>Please check the message and click on the link to <br/> confirm your registration</p>
+                <p>Protected by ***** <a href="#!" className="link">More</a></p>
             </div>
             <div className="footer_block">
                 <p>Email security Powered By ******** <a href="#!" className="link">More</a></p>
