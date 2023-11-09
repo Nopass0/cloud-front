@@ -12,9 +12,6 @@ function AuthIndex() {
     },[])
 
     const [lang, setLang] = useState(localStorage.getItem('lang_item') === 'ru' ? 'ru' : 'en');
-    // document.addEventListener('changeLang', (event) => {
-    //     setLang(lang);
-    // })
     const changeLang = new CustomEvent('changeLang', {});
     return (
         <>
