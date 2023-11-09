@@ -111,6 +111,14 @@
     animation: slide-in 1s forwards;
 }
 
+@media (max-width: 700px) {
+    .error_Block {
+        position: absolute;
+        left: 50px;
+        top: 120px;
+    }
+}
+
 @keyframes slide-in {
     0% {
       transform: translateX(100%);

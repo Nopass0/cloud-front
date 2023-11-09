@@ -57,7 +57,7 @@ function Readr_msg() {
                                     <p>htmlfile.html</p>
                                 </div>
                                 <div className="plain_text_read">
-                                    <textarea name="" className="plain_text--area" id="plain_text--area">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque amet repellendus dolor, sunt qui aspernatur explicabo aut quo excepturi porro eaque a molestias quidem aperiam distinctio doloribus quisquam. Autem, commodi.</textarea>
+                                    <textarea readOnly name="" className="plain_text--area" id="plain_text--area">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque amet repellendus dolor, sunt qui aspernatur explicabo aut quo excepturi porro eaque a molestias quidem aperiam distinctio doloribus quisquam. Autem, commodi.</textarea>
                                 </div>
                                 <div className="footer_r_msg">
                                     <div className="copy_block">                                       
