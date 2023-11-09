@@ -10,11 +10,25 @@ function AuthIndex() {
             setIsLogin(true);
         });
     },[])
+
+    const [lang, setLang] = useState(localStorage.getItem('lang_item') === 'ru' ? 'ru' : 'en');
+    // document.addEventListener('changeLang', (event) => {
+    //     setLang(lang);
+    // })
+    const changeLang = new CustomEvent('changeLang', {});
     return (
         <>
             <div className="container">
                 <div className="header">
-                    <p><button className="en active">en</button>/<button className="ru">ru</button></p>
+                    <p>
+                        <button className={localStorage.getItem('lang_item') === 'en' ? 'en active' : 'en'} onClick={() => {setLang('en'); localStorage.setItem('lang_item','en'); document.dispatchEvent(changeLang);}}>
+                        en
+                        </button>
+                        /
+                        <button className={localStorage.getItem('lang_item') === 'ru' ? 'ru active' : 'ru'} onClick={() => {setLang('ru'); localStorage.setItem('lang_item', 'ru'); document.dispatchEvent(changeLang);}}>
+                            ru
+                        </button>
+                    </p>
                     <div className="button_sign">
                         {isLogin ? 
                         <>
@@ -23,13 +37,17 @@ function AuthIndex() {
                                 <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
                                 <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
                             </svg>
-                            Sign Out
+                            {lang === 'ru' ? 'Выход' : 'Sign Out'}
                         </button>
                         </>
                         : 
                         <>
-                            <button className={localStorage.getItem('wrap_item') === 'SignIn' ? 'sign_in active' : 'sign_in'} onClick={() => {setWrap(<Sign_In/>); localStorage.setItem('wrap_item','SignIn')}}>Sign In</button>
-                            <button className={localStorage.getItem('wrap_item') === 'SignUp' ? 'sign_up active' : 'sign_up'} onClick={() => {setWrap(<Sign_Up/>); localStorage.setItem('wrap_item','SignUp')}}>Sign Up</button>
+                            <button className={localStorage.getItem('wrap_item') === 'SignIn' ? 'sign_in active' : 'sign_in'} onClick={() => {setWrap(<Sign_In/>); localStorage.setItem('wrap_item','SignIn')}}>
+                                {lang === 'ru' ? 'Вход' : 'Sign In'}
+                            </button>
+                            <button className={localStorage.getItem('wrap_item') === 'SignUp' ? 'sign_up active' : 'sign_up'} onClick={() => {setWrap(<Sign_Up/>); localStorage.setItem('wrap_item','SignUp')}}>
+                               {lang === 'ru' ? 'Регистрация' : 'Sign Up'}
+                            </button>
 
                         </> 
                             

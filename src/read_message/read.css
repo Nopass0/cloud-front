@@ -41,7 +41,7 @@
 .block_read {
     width: 768px;
     min-width: 540px;
-    height: 768px;
+    min-height: 768px;
     border-radius: 35px;
     background: rgba(255, 255, 255, 0.75);
     box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
@@ -170,7 +170,7 @@
 .block_r_msg {
     width: 768px;
     min-width: 570px;
-    height: 969px;
+    min-height: 969px;
     border-radius: 35px;
     background: rgba(255, 255, 255, 0.75);
     box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
@@ -178,7 +178,7 @@
 }
 
 .inside_r_msg {
-    padding: 0px 70px;
+    padding: 0px 50px;
 }
 
 .header_block_r_msg {
@@ -192,8 +192,10 @@
     margin-right: 63px;
 }
 
-
-.from h3{
+.from {
+    margin-bottom: 30px;
+}
+.from h3, .from p{
     margin: 0;
 }
 
@@ -203,6 +205,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+}
+
+.to_r_msg h3, .to_r_msg p {
+    margin: 0;
 }
 
 .to_r_msg label, .subject_r_msg label, .attach_r_msg span {
@@ -251,7 +257,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 45px;
+    margin-bottom: 10px;
 }
 
 .attach_r_msg p {
@@ -276,86 +282,13 @@
 
 /* Quil Text Editor */
 
-.plain_text {
-    border-radius: 20px;
+.plain_text_read {
+    /* border-radius: 20px;
     background: #F2F3F6;
-    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
-    margin-bottom: 30px;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10); */
+    margin-bottom: 10px;
     font-family: Arial, Helvetica, sans-serif !important;
 
-}
-
-.quill {
-    height: 158px;
-    font-family: Arial, Helvetica, sans-serif !important;
-}
-
-.ql-container {
-    font-family: Arial, Helvetica, sans-serif !important;
-}
-
-em {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
-}
-
-.ql-editor p, .ql-editor ol, .ql-editor ul, .ql-editor pre, .ql-editor blockquote, .ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
-   
-}
-
-.ql-editor {
-    height: 70% !important;
-    font-size: 15px;
-}
-.ql-toolbar.ql-snow,.ql-container.ql-snow {
-    border: none !important;
-}
-
-.ql-toolbar.ql-snow {
-    padding: 0 30px !important;
-}
-
-.ql-container.ql-snow {
-    padding: 0 22px !important;
-}
-
-.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
-    border-radius: 4px !important;
-    background: #FFF !important;
-    margin-right: 5px;
-}
-
-.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover{
-    transition: all .3s;
-    background: #6176DE !important;
-}
-
-.ql-snow .ql-stroke:hover {
-    stroke: white !important;
-}
-
-.ql-snow .ql-fill:hover, .ql-snow .ql-stroke.ql-fill:hover {
-    fill: white !important;
-}
-
-.ql-snow.ql-toolbar button:hover .ql-stroke, .ql-snow .ql-toolbar button:hover .ql-stroke {
-    stroke: white !important;
-}
-
-.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover{
-    color: white !important;
-}
-
-.ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill, .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill, .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
-    fill: white !important;
-}
-
-.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover {
-    color: white !important;
-}
-
-.ql-snow.ql-toolbar button:hover .ql-fill, .ql-snow .ql-toolbar button:hover .ql-fill {
-    fill: white !important;
 }
 
 /* Footer */
@@ -366,25 +299,28 @@ em {
     justify-content: space-between;
 }
 
-/* .copy_block {
-
-}
-
-.copy_me {
-    display: flex;
-    align-items: center;
-}
-
-.copy_me input[type="checkbox"] {
-    border-radius: 4px;
-    border: 1.3px solid #000;
-    cursor: pointer;
-} */
-
 .send_secure {
     width: 186px;
     height: 65px;
     padding: 18px 21px 18px 22px;
     font-size: 24px;
     font-weight: 500;
+}
+
+/* Text Area */
+.plain_text--area {
+    width: 100%;
+    min-height: 300px;
+    border-radius: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: #F2F3F6;
+    box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.10);
+    padding: 15px 10px;
+    font-size: 18px;
+}
+
+.plain_text--area:focus, .plain_text--area:active, .plain_text--area:hover, .plain_text--area:any {
+    border: none;
 }

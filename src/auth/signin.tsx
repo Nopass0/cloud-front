@@ -24,18 +24,22 @@ const Sign_In: React.FC = () => {
         setIsWrong(false);
     };
 
+    const [lang,setLang] = useState(localStorage.getItem('lang_item') === 'ru' ? 'ru' : 'en');
+    document.addEventListener('changeLang', (event) => {
+        setLang(localStorage.getItem('lang_item') === 'ru' ? 'ru' : 'en');  
+    })
 
     return (
         <>
         <div className="InsideBlock">
             <div className="header_block">
                 <h2>LOGO</h2>
-                <h1>Sign In</h1>
+                <h1>{lang === 'ru' ? 'Вход' : 'Sign In'}</h1>
                 <p style={{color: switchPage ? '#6176DE' : 'black'}}>{switchPage ? '2/2' : '1/2'}</p>
             </div>
             <div className="main_block">
                 <div className="input_email" style={{display: switchPage ? 'none' : 'flex'}}>
-                    <label htmlFor="email_In">Enter your email</label>
+                    <label htmlFor="email_In">{lang === 'ru' ? 'Введите ваш email' : 'Enter your email'}</label>
                     <input 
                     type="email" 
                     id="email_In" 
@@ -46,21 +50,21 @@ const Sign_In: React.FC = () => {
                     />
                 </div>
                 <div className="input_password_email" style={{display: switchPage ? 'flex' : 'none'}}>
-                    <label htmlFor="password_In">Enter password for {email}</label>
+                    <label htmlFor="password_In">{lang === 'ru' ? 'Введите пароль для' : 'Enter password for'} {email}</label>
                     <input 
                     type="password" 
                     id="password_In"
                     />
                 </div>
-                <button className="accept_sign_button button_active" onClick={handleSubmit}>Sign In</button>
-                <p>Protected by ***** <a href="#!" className="link">More</a></p>
+                <button className="accept_sign_button button_active" onClick={handleSubmit}>{lang === 'ru' ? 'Войти' : 'Sign In'}</button>
+                <p>{lang === 'ru' ? 'Защищенно с помощью' : 'Protected by'} ***** <a href="#!" className="link">{lang === 'ru' ? 'Подробнее' : 'More'}</a></p>
             </div>
             <div className="footer_block">
-                <p>Email security Powered By ******** <a href="#!" className="link">More</a></p>
+                <p>{lang === 'ru' ? 'Данные защищенны с помощью' : 'Email security powered by'} ******** <a href="#!" className="link">{lang === 'ru' ? 'Подробнее' : 'More'}</a></p>
             </div>
         </div>
         <div className="error_Block" style={isWrong ? {display: 'flex'} : {display: 'none'}}>
-            Error: <span style={{color: 'black'}}>&nbsp;enter your email</span>
+            {lang === 'ru' ? 'Ошибка:' : 'Error:'}: <span style={{color: 'black'}}>&nbsp;{lang === 'ru' ? 'Неправильный email' : 'enter your email'}</span>
         </div>  
         </>
     );
