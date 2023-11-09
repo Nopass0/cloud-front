@@ -7,7 +7,7 @@
 
 /* header */
 .header_message {
-    min-width: 670px;
+    min-width: 560px;
     display: flex;
     justify-content: space-between;
     align-items: center;
