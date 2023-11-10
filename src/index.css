@@ -30,6 +30,7 @@
     width: 700px;
     overflow: auto;
     background-size: 4000px;
+    background-position-y: 0;
   }
 }
 
