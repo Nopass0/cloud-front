@@ -7,7 +7,7 @@
 
 /* header */
 .header_message {
-    min-width: 560px;
+    min-width: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,7 +63,7 @@
 }
 .block_message {
     width: 768px;
-    min-width: 670px;
+    min-width: 768px;
     min-height: 969px;
     border-radius: 35px;
     background: rgba(255, 255, 255, 0.75);
@@ -325,7 +325,7 @@ em {
 .copy_email::before {
     content: '';
     display: block;
-    width: 100%;
+    max-width: 400px;
     height: 2px;
     background: #6176DE;
     border-radius: 2px;

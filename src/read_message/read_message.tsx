@@ -47,6 +47,7 @@ function Readr_msg() {
                                         <label htmlFor="subject" style={{marginRight: '30px'}}>{lang === 'ru' ? 'Тема:' : 'Subject:'}</label>
                                     </div>
                                     <input
+                                    readOnly
                                     type="text"
                                     id="subject"
                                     placeholder="Test"
@@ -61,7 +62,7 @@ function Readr_msg() {
                                 </div>
                                 <div className="footer_r_msg">
                                     <div className="copy_block">                                       
-                                        <p className="copy_email" style={{fontSize: '20px', fontWeight: '400', color: '#CCC'}}>{lang === 'ru' ? 'Данные защищенны с помощью' : 'Email security Powered By'} ******** <a className="link" href="#!">{lang === 'ru' ? 'Подробнее' : 'More'}</a></p>
+                                        <p className="copy_email_r_msg" style={{fontSize: '20px', fontWeight: '400', color: '#CCC'}}>{lang === 'ru' ? 'Данные защищенны с помощью' : 'Email security Powered By'} ******** <a className="link" href="#!">{lang === 'ru' ? 'Подробнее' : 'More'}</a></p>
                                     </div>
                                     <button className="button_active send_secure">{lang === 'ru' ? 'Ответить' : 'Reply'}</button>
                                 </div>

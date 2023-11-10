@@ -321,6 +321,16 @@
     font-size: 18px;
 }
 
-.plain_text--area:focus, .plain_text--area:active, .plain_text--area:hover, .plain_text--area:any {
+.plain_text--area:any {
     border: none;
+}
+
+.copy_email_r_msg::before {
+    content: '';
+    display: block;
+    max-width: 400px;
+    height: 2px;
+    background: #6176DE;
+    border-radius: 2px;
+    margin-bottom: 10px;
 }

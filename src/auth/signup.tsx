@@ -9,7 +9,8 @@ const Sign_Up: React.FC = () => {
     const [switchPage2, setSwitchPage2] = useState(false);
     // Is Wrong Email? True/False 
     const [isWrong,setIsWrong] = useState(false);
-    const [isWrong2,setIsWrong2] = useState(false);
+    const [isWrongPswd,setisWrongPswd] = useState(false);
+    const [isWrongSym, setisWrongSym] = useState(false);
     const [password, setPassword] = useState('');
     const [retypePassword, setRetypePassword] = useState('');
 
@@ -27,25 +28,40 @@ const Sign_Up: React.FC = () => {
         const changeSign = new CustomEvent('changeSign', {});
 
         const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-
+        setisWrongPswd(false);
+        setisWrongSym(false);
         if (!emailRegex.test(email)) {
             setIsWrong(true);
             return;
         }
 
-        if (switchPage === true && (password !== retypePassword || password.length < 8)) {
-            setIsWrong2(true);
-            return;
+        // if (switchPage === true && (password !== retypePassword || password.length < 8)) {
+        //     setisWrongPswd(true);
+        //     setisWrongSym(true);
+        //     return;
+        // }
+
+        if(switchPage === true) {
+            switch (true) {
+                case password !== retypePassword:
+                    setisWrongPswd(true);
+                    return;
+    
+                case password.length < 8:
+                    setisWrongSym(true);
+                    return;
+            }
         }
         if (switchPage) {
             setSwitchPage2(true);
-            setIsWrong2(false);
+            setisWrongPswd(false);
             document.dispatchEvent(changeSign);
             return;
         }
         setSwitchPage(true);
         setIsWrong(false);
-        setIsWrong2(false);
+        setisWrongPswd(false);
+        setisWrongSym(false);
     };
 
 
@@ -78,7 +94,7 @@ const Sign_Up: React.FC = () => {
                     id="password_In"
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
-                    style={isWrong2 ? {background: 'rgba(255, 38, 38, 0.20)'} : {}}
+                    style={isWrongPswd || isWrongSym ? {background: 'rgba(255, 38, 38, 0.20)'} : {}}
                     />
                 </div>
                 
@@ -89,7 +105,7 @@ const Sign_Up: React.FC = () => {
                     id="retype_password"
                     value={retypePassword}
                     onChange={(event) => setRetypePassword(event.target.value)}
-                    style={isWrong2 ? {background: 'rgba(255, 38, 38, 0.20)'} : {}}
+                    style={isWrongPswd || isWrongSym ? {background: 'rgba(255, 38, 38, 0.20)'} : {}}
                     />
                 </div>
                 <button className="accept_sign_button button_active" onClick={handleSubmit}>{lang === 'ru' ? 'Продолжить' : 'Next'}</button>
@@ -105,8 +121,12 @@ const Sign_Up: React.FC = () => {
             {lang === 'ru' ? 'Ошибка:' : 'Error:'} <span style={{color: 'black'}}>&nbsp;{lang === 'ru' ? 'Проверьте ваш email' : 'Enter your email'}</span>
         </div>  
         
-        <div className="error_Block" style={isWrong2 ? {display: 'flex'} : {display: 'none'}}>
+        <div className="error_Block" style={isWrongPswd ? {display: 'flex'} : {display: 'none'}}>
             {lang === 'ru' ? 'Ошибка:' : 'Error:'} <span style={{color: 'black'}}>&nbsp;{lang === 'ru' ? 'Пароли не совпадают' : 'Passwords do not match'}</span>
+        </div> 
+
+        <div className="error_Block" style={isWrongSym ? {display: 'flex'} : {display: 'none'}}>
+            {lang === 'ru' ? 'Ошибка:' : 'Error:'} <span style={{color: 'black'}}>&nbsp;{lang === 'ru' ? 'Минимальное количество символов 8' : 'Min 8 symbols'}</span>
         </div> 
 
         {/* Check Your Email */}

@@ -5,20 +5,22 @@
 
   color: rgba(255, 255, 255, 0.87);
   background-color: white;
-  background: url('./assets/background.svg') no-repeat;
-  background-size: 5000px;
+  background: url('./assets/background.svg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media (max-width:700px) {
   :root {
-    /* background-size: 3000px; */
     width: 700px;
+    overflow: auto;
   }
 }
 

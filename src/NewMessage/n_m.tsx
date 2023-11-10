@@ -34,7 +34,7 @@ function NewMessage() {
                     <div className="block_message">
                         <div className="inside_message">
                             <div className="header_block_message">
-                                <h2>LOGO</h2>
+                                <h2 style={lang === 'ru' ? {whiteSpace: 'nowrap', marginRight: '30px'} : {}}>LOGO</h2>
                                 <h1 style={{whiteSpace: 'nowrap'}}>
                                 {lang === 'ru' ? 'Новое сообщение' : 'New Message'}
                                 </h1>
