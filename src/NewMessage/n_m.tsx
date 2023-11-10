@@ -6,7 +6,14 @@ function NewMessage() {
     const [value,setValue] = useState('');
     const [show, setShow] = useState(false);
     const [lang, setLang] = useState(localStorage.getItem('lang_item') === 'ru' ? 'ru' : 'en');
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedName, setSelectedName] = useState('');
 
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        setSelectedFile(file);
+        setSelectedName(file.name);
+    }
     return (
         <>
             <div className="container">
@@ -34,7 +41,7 @@ function NewMessage() {
                     <div className="block_message">
                         <div className="inside_message">
                             <div className="header_block_message">
-                                <h2 style={lang === 'ru' ? {whiteSpace: 'nowrap', marginRight: '30px'} : {}}>LOGO</h2>
+                                <h2 style={lang === 'ru' ? {whiteSpace: 'nowrap', marginRight: '10px'} : {}}>LOGO</h2>
                                 <h1 style={{whiteSpace: 'nowrap'}}>
                                 {lang === 'ru' ? 'Новое сообщение' : 'New Message'}
                                 </h1>
@@ -76,8 +83,11 @@ function NewMessage() {
                                 </div>
                                 <div className="attach_message">
                                     <span style={{marginRight: '30px'}}>{lang === 'ru' ? 'Вложения:' : 'Attach'} </span>
-                                    <label htmlFor="attach">{lang === 'ru' ? 'Обзор' : 'overview'}</label>
-                                    <input type="file" name="attach" id="attach" />
+                                    <label htmlFor="attach">{lang === 'ru' ? 'Обзор' : 'Overview'}</label>
+                                    <span style={{fontSize: '14px', fontWeight: '400', marginLeft: '10px'}}>
+                                        {lang === 'ru' ? selectedName || 'Выберите файл' : selectedName || 'Choose File'}
+                                    </span>
+                                    <input type="file" name="attach" id="attach" onChange={handleFileChange}/>
                                 </div>
                                 <div className="plain_text" style={{paddingTop: '5px'}}>
                                     <h2 style={{fontSize: '18px', fontWeight: '500', padding: '0 10px'}}>{lang === 'ru' ? 'Текст письма' : 'Plain Text'}</h2>

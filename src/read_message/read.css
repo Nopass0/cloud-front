@@ -272,9 +272,6 @@
     font-size: 13px;
 }
 
-#attach {
-    visibility: hidden;
-}
 
 #editor-container {
     height: 375px;
@@ -310,7 +307,7 @@
 /* Text Area */
 .plain_text--area {
     width: 100%;
-    min-height: 300px;
+    min-height: 440px;
     border-radius: 20px;
     resize: none;
     border: none;

@@ -197,7 +197,7 @@
 }
 
 .quill {
-    height: 240px;
+    height: 440px;
     font-family: Arial, Helvetica, sans-serif !important;
 }
 
@@ -215,7 +215,7 @@ em {
 }
 
 .ql-editor {
-    height: 70% !important;
+    height: 90% !important;
     font-size: 18px;
 }
 .ql-toolbar.ql-snow,.ql-container.ql-snow {

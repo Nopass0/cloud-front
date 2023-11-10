@@ -35,11 +35,6 @@ const Sign_Up: React.FC = () => {
             return;
         }
 
-        // if (switchPage === true && (password !== retypePassword || password.length < 8)) {
-        //     setisWrongPswd(true);
-        //     setisWrongSym(true);
-        //     return;
-        // }
 
         if(switchPage === true) {
             switch (true) {
